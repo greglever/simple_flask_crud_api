@@ -1,0 +1,15 @@
+db:
+  restart: always
+  image: postgres:10.3
+  environment:
+    POSTGRES_USER: crudproducts
+    POSTGRES_PASSWORD: crudproducts
+    POSTGRES_DB: crudproducts
+web:
+  build: .
+  restart: always
+  links:
+    - db
+  ports:
+    - "5000:5000"
+  command: --db_host=db
