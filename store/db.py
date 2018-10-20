@@ -17,7 +17,7 @@ def create_default_database_table():
     """
     db = get_db()
     db.execute("DROP TABLE IF EXISTS products")
-    db.execute("CREATE TABLE IF NOT EXISTS products (product_code SERIAL PRIMARY KEY, name VARCHAR(100), price FLOAT )")
+    db.execute("CREATE TABLE products (id SERIAL PRIMARY KEY, name VARCHAR(100), price FLOAT )")
     db.execute("INSERT INTO products (name, price) VALUES (%s, %s)", "Lavender heart", 9.25)
     db.execute("INSERT INTO products (name, price) VALUES (%s, %s)", "Personalised cufflinks", 45.00)
     db.execute("INSERT INTO products (name, price) VALUES (%s, %s)", "Kids T-shirt", 19.95)
