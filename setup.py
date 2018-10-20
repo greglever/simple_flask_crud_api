@@ -22,5 +22,6 @@ setup(
         'Flask==1.0.2',
         'sqlalchemy==1.2.12',
         'psycopg2==2.7.5',
+        'flask-restplus==0.12.1',
     ]
 )
